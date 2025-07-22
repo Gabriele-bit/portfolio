@@ -11,12 +11,34 @@ body{
 
 #root{
   display:flex;
-  /* justify-content:center;
-  align-items: center; */
+  align-items: center;
   flex-direction:column;
   overflow:auto;
   padding:0;
   margin:0;
   height:100vh;
-  background-color:white;
+  background-color:#000;
+}
+
+
+/* Scrollbar */
+.scrollable::-webkit-scrollbar {
+  width: 1vh;
+}
+
+/* Track (sfondo della scrollbar) */
+.scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10vh;
+}
+
+/* Thumb (la parte che scorre) */
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10vh;
+}
+
+/* Hover sul thumb */
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
