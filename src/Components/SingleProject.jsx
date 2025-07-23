@@ -31,9 +31,9 @@ export default function SingleProject(props) {
                 <span className="text-[2vh]">{props.subtitle}</span>
             </div>
             <div className=" w-[100%] h-[30vh] flex flex-col justify-center items-center relative">
-                <div className="flex gap-2.5 text-[5vh] text-[#ffffff67] font-bold ">
-                    <input type="button" className=" hover:text-red-400 cursor-pointer absolute bottom-[40%] right-5 " onClick={() => changeScreen()} value={">"}></input>
-                    <input type="button" className=" hover:text-red-400 cursor-pointer absolute bottom-[40%] left-5" onClick={() => changeScreen()} value={"<"}></input>
+                <div className="flex gap-2.5 text-[5vh] text-white  font-bold ">
+                    <input type="button" className=" hover:text-red-400 bg-[#0000005f] lg:bg-none pl-2 pr-2 cursor-pointer absolute top-1/2 -translate-y-1/2 lg:right-20 right-0 " onClick={() => changeScreen()} value={">"}></input>
+                    <input type="button" className=" hover:text-red-400 cursor-pointer bg-[#0000005f] lg:left-20 pl-2 pr-2 lg:bg-none absolute top-1/2 -translate-y-1/2  left-0" onClick={() => changeScreen()} value={"<"}></input>
                 </div>
                 <img className=" w-[auto] h-full " src={imageNumber.img} />
             </div>
