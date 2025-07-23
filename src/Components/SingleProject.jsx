@@ -1,25 +1,41 @@
 import { useEffect, useState } from "react";
 
-
 export default function SingleProject(props) {
-    const [screen, setScreen] = useState(props.screenDesktop);
-    const [num, setNum] = useState(1);
-    const imageNumber = {
-        num: num,
-        img: screen
+  const [screen, setScreen] = useState(props.screenDesktop);
+  const [num, setNum] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
+  const [expanded, setExpanded] = useState(false);  // stato per espansione testo su mobile
+
+  const imageNumber = {
+    num: num,
+    img: screen,
+  };
+
+  const changeScreen = () => {
+    if (imageNumber.num === 1) {
+      setScreen(props.screenMobile);
+      setNum(2);
+    } else {
+      setScreen(props.screenDesktop);
+      setNum(1);
     }
+  };
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+      setExpanded(false); // chiudo testo espanso se cambio dimensione schermo
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
-
-    const changeScreen = () => {
-        if (imageNumber.num === 1) {
-            setScreen(props.screenMobile);
-            setNum(2);
-        } else {
-            setScreen(props.screenDesktop);
-            setNum(1);
-        }
+  const toggleExpanded = () => {
+    if (isMobile) {
+      setExpanded((prev) => !prev);
     }
+  };
 
     return (
         <div className="flex flex-1 lg:flex-1/4 bg-[#333333a3] flex-col justify-center items-center text-white h-fit">
@@ -45,15 +61,22 @@ export default function SingleProject(props) {
                     <hr className="border-0.5 border-[#ffffff45] w-full"></hr>
                 </div>
 
-                <div className="w-[70%] h-[4.5rem]  m-3 flex justify-center items-start relative">
-                    <p className="w-full text-xs text-[#ffffff99] line-clamp-3 overflow-hidden text-ellipsis text-justify
-                                hover:absolute hover:bg-[#000000d4] hover:text-white hover:p-2 hover:overflow-auto 
-                                hover:line-clamp-none 
-                                 onclick:absolute onclick:bg-[#000000d4] onclick:text-white onclick:p-2 onclick:overflow-auto 
-                                onclick:line-clamp-none">
+                <div className="w-[70%] h-[4.5rem] m-3 flex justify-center items-start relative">
+                    <p
+                        onClick={toggleExpanded}
+                        className={
+                            "w-full text-xs text-[#ffffff99] text-justify cursor-pointer " +
+                            (isMobile
+                                ? expanded
+                                    ? "whitespace-normal overflow-visible line-clamp-none p-2 bg-[#000000d4] text-white"
+                                    : "line-clamp-3 overflow-hidden text-ellipsis"
+                                : "line-clamp-3 overflow-hidden text-ellipsis hover:absolute hover:bg-[#000000d4] hover:text-white hover:p-2 hover:overflow-auto hover:line-clamp-none")
+                        }
+                        style={{ transition: "all 0.3s ease" }}
+                        title={isMobile ? props.description : undefined}
+                    >
                         {props.description || " "}
                     </p>
-
                 </div>
 
                 <div className="flex flex-1 justify-center items-center w-full p-2">
