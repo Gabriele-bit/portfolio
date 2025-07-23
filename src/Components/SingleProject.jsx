@@ -55,7 +55,7 @@ export default function SingleProject(props) {
                 </div>
 
                 <div className="flex flex-1 justify-center items-center w-full p-2">
-                    <a href={props.link} className="text-red-400 font-bold hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-red-400 to-[#C9A74D] text-xl font-bold">Go to {props.title}</a>
+                    <a href={props.link} className="text-red-400  hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-red-400 to-[#C9A74D] text-xl font-bold">Go to {props.title}</a>
                 </div>
             </div>
         </div>
