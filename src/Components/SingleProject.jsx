@@ -48,7 +48,9 @@ export default function SingleProject(props) {
                 <div className="w-[70%] h-[4.5rem]  m-3 flex justify-center items-start relative">
                     <p className="w-full text-xs text-[#ffffff99] line-clamp-3 overflow-hidden text-ellipsis text-justify
                                 hover:absolute hover:bg-[#000000d4] hover:text-white hover:p-2 hover:overflow-auto 
-                                hover:line-clamp-none ">
+                                hover:line-clamp-none 
+                                 onclick:absolute onclick:bg-[#000000d4] onclick:text-white onclick:p-2 onclick:overflow-auto 
+                                onclick:line-clamp-none">
                         {props.description || " "}
                     </p>
 
