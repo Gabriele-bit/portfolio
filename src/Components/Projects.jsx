@@ -2,10 +2,10 @@ import SingleProject from "./SingleProject"
 
 export default function Projects() {
     return (
-        <div id='projects' className=" flex flex-col h-fit">
+        <div id='projects' className=" flex flex-col min-h-full justify-around">
             <h1 className="w-full text-white font-bold text-[5vh] text-center">Projects</h1>
-            <div className="h-full w-full flex flex-col flex-wrap justify-start gap-5.5
-            lg:flex-row  p-3 pt-5.5">
+            <div className=" scrollable w-[90%] self-center  flex flex-nowrap justify-start items-center gap-5.5
+            flex-row overflow-auto ">
                 <SingleProject
                     title="shoPOP"
                     screenMobile="\images\Immagine WhatsApp 2025-07-22 ore 22.42.53_914f590b.jpg"
@@ -29,10 +29,6 @@ export default function Projects() {
                     subtitle="Organize Your Day, Your Way"
                     link="https://just-to-do-list.netlify.app/">
                 </SingleProject>
-
-
-
-
             </div>
         </div>
     )

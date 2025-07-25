@@ -7,7 +7,10 @@ body{
 
 *{
   box-sizing: border-box;
+
+  user-select:none;
 }
+
 
 #root{
   display:flex;
@@ -29,16 +32,19 @@ body{
 /* Track (sfondo della scrollbar) */
 .scrollable::-webkit-scrollbar-track {
   background: #f1f1f1;
-  border-radius: 10vh;
+  border-radius: 0hh;
 }
 
 /* Thumb (la parte che scorre) */
 .scrollable::-webkit-scrollbar-thumb {
   background-color: grey;
-  border-radius: 10vh;
+  border-radius: 0vh;
 }
 
 /* Hover sul thumb */
 .scrollable::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+
+

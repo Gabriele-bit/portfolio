@@ -1,8 +1,9 @@
 import Button from "./Button"
 export default function About() {
     return (
-        <div id="aboutme" className=" flex flex-col flex-nowrap justify-center text-white p-5 text-left lg:min-h-full">
-            <div className="flex flex-col m-5 gap-10 lg:flex-row">
+        <div id="aboutme" className=" flex flex-col justify-around text-white text-left  min-h-fit lg:min-h-full ">
+            {/* <h1 className="w-full text-white font-bold text-[5vh] text-center ">About</h1> */}
+            <div className="flex flex-col m-5 gap-10 lg:flex-row ">
                 <div className="flex flex-col flex-1/3">
                     <div className="p-5 flex flex-col bg-[#333333a3] border-1 border-[#ffffff5e] rounded-2xl  lg:h-fit " >
                         <h2 className='text-[4.5vh] font-bold '>
@@ -18,7 +19,7 @@ export default function About() {
                 </div>
 
 
-                <div className="flex-1/2 p-5 flex flex-col bg-[#333333a3]  border-1 border-[#ffffff5e] rounded-2xl">
+                <div className="flex-1/2 p-5 flex flex-col bg-[#333333a3]  border-1 border-[#ffffff5e] rounded-2xl h-fit">
                     <h2 className='text-[4.5vh] font-bold'>
                         Technologies
                     </h2>
