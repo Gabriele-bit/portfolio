@@ -29,19 +29,19 @@ export default function About() {
 
                     <div className=" m-[1vw] mt-0">
                         <div className="mb-[2vh]">
-                            <h3 class="text-[3vh] font-semibold">Backend:</h3>
+                            <h3 class="text-2xl font-semibold">Backend:</h3>
                             <p className="text-[2.5vh]">Java, Spring Boot, Spring AI</p>
                         </div>
                         <div className="mb-[2vh]">
-                            <h3 class="text-[3vh] font-semibold">Frontend:</h3>
+                            <h3 class="text-2xl font-semibold">Frontend:</h3>
                             <p className="text-[2.5vh]">HTML, CSS, Tailwind CSS, JavaScript, React</p>
                         </div>
                         <div className="mb-[2vh]">
-                            <h3 class="text-[3vh] font-semibold">Databases:</h3>
+                            <h3 class="text-2xl font-semibold">Databases:</h3>
                             <p className="text-[2.5vh]">MySQL</p>
                         </div>
                         <div className="mb-[2vh]">
-                            <h3 class="text-[3vh] font-semibold">Other Languages:</h3>
+                            <h3 class="text-2xl font-semibold">Other Languages:</h3>
                             <p className="text-[2.5vh]">PHP, C, C++, C#, Unity</p>
                         </div>
                     </div>

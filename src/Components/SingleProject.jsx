@@ -51,10 +51,6 @@ export default function SingleProject(props) {
         </div>
         {/*Contenitore immagine e pulsanti per cambiarla */}
         <div className=" w-[100%] h-[30vh] flex flex-row justify-center items-center relative">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
-            className="lg:size-15 size-10 lg:block absolute left-2 hover:text-red-400 cursor-pointer bg-[#0000005f] lg:bg-transparent pl-2 pr-2 " onClick={() => changeScreen()} >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-          </svg>
           <div className="relative w-[auto]  h-full flex justify-center items-center">
             {!fullScreen ?
               <>
@@ -77,10 +73,15 @@ export default function SingleProject(props) {
             }
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+            className={"lg:size-15 absolute lg:block left-2 size-10 hover:text-red-400 bg-[#0000005f] lg:bg-transparent pl-2 pr-2 cursor-pointer "} onClick={() => changeScreen()}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
             className="lg:size-15 absolute lg:block right-2 size-10 hover:text-red-400 bg-[#0000005f] lg:bg-transparent pl-2 pr-2 cursor-pointer " onClick={() => changeScreen()}>
             <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
           </svg>
         </div>
+
         {/*Contenitore  tecnologie, descrizione e link */}
         <div className="flex w-full flex-col justify-center items-center ">
           <div className="flex flex-1 flex-col w-full items-center h-full justify-center ">
@@ -89,14 +90,14 @@ export default function SingleProject(props) {
             <hr className="border-0.5 border-[#ffffff45] w-full"></hr>
           </div>
 
-          <div className="w-[50%] h-[4.5rem] m-3 flex justify-center items-start relative z-[999]">
+          <div className="w-[50%] h-[4.5rem] m-3 flex justify-center items-start relative ">
             <p
               onClick={toggleExpanded}
               className={
                 "w-full text-xs text-[#ffffff99] text-justify cursor-pointer " +
                 (isMobile
                   ? expanded
-                    ? "whitespace-normal overflow-visible line-clamp-none p-2 bg-[#000000d4] text-white"
+                    ? "whitespace-normal overflow-visible line-clamp-none p-2 bg-[#000000d4] text-white absolute bottom-0"
                     : "line-clamp-3 overflow-hidden text-ellipsis"
                   : "line-clamp-3 overflow-hidden text-ellipsis hover:absolute hover:bg-[#000000d4] hover:text-white hover:p-2 hover:overflow-auto hover:line-clamp-none")
               }

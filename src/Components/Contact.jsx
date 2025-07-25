@@ -6,7 +6,7 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact" className="min-h-full flex flex-col gap-4 bg-neutral-900 p-6">
+    <div id="contact" className="min-h-fit flex flex-col gap-4 bg-neutral-900 p-6">
       <div className="flex flex-col text-white items-center gap-3">
         <h1 className="w-full font-bold text-[5vh] text-center text-white">Contacts</h1>
 
