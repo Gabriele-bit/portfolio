@@ -32,9 +32,7 @@ export default function SingleProject(props) {
   }, []);
 
   const toggleExpanded = () => {
-    if (isMobile) {
       setExpanded((prev) => !prev);
-    }
   };
 
   return (
@@ -94,12 +92,11 @@ export default function SingleProject(props) {
             <p
               onClick={toggleExpanded}
               className={
-                "w-full text-xs text-[#ffffff99] text-justify cursor-pointer " +
-                (isMobile
-                  ? expanded
+                "w-full text-xs text-[#ffffff99] text-justify cursor-pointer hover:absolute hover:bottom-0 hover:bg-[#000000d4] hover:text-white hover:p-2 hover:overflow-auto hover:line-clamp-none " +
+                (
+                  expanded
                     ? "whitespace-normal overflow-visible line-clamp-none p-2 bg-[#000000d4] text-white absolute bottom-0"
-                    : "line-clamp-3 overflow-hidden text-ellipsis"
-                  : "line-clamp-3 overflow-hidden text-ellipsis hover:absolute hover:bg-[#000000d4] hover:text-white hover:p-2 hover:overflow-auto hover:line-clamp-none")
+                    : "line-clamp-3 overflow-hidden text-ellipsis")
               }
               style={{ transition: "all 0.3s ease" }}
               title={isMobile ? props.description : undefined}>
